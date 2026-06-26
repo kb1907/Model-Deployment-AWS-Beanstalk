@@ -4,7 +4,6 @@ import numpy as np
 application = Flask(__name__)
 model = pickle.load(open('catboost_model-2.pkl', 'rb'))
 
-
 @application.route('/', methods=['GET'])
 def Home():
     return render_template('index.html')
